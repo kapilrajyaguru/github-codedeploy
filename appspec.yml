@@ -16,10 +16,10 @@ permissions:
 
 hooks:
   BeforeInstall:
-    - location: /deregister_from_elb
+    - location: /deregister_from_elb.sh
     - location: scripts/webserver-stop.sh
     - location: /delete-old-index.sh
   AfterInstall:
     #- location: scripts/sleep.sh
     - location: scripts/webserver-start.sh
-    - location: /register_with_elb
+    - location: /register_with_elb.sh
